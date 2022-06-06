@@ -7,7 +7,7 @@ import (
 )
 
 
-func parseBody(r *http.Request, x interface{}){
+func ParseBody(r *http.Request, x interface{}){
 	if body, err := ioutil.ReadAll(r.Body); err == nil {
 		if err := json.Unmarshal(body, x); err != nil {
 			return

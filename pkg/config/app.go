@@ -11,7 +11,7 @@ var (
 )
 
 func Connect() {
-	d, err := gorm.Open("mysql", "root:root@/bookstore?charset=utf8&parseTime=True&loc=Local")
+	d, err := gorm.Open("mysql", "eshy10:eshy10@/bookstore?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic(err)
 	}
@@ -21,5 +21,3 @@ func Connect() {
 func GetDB() *gorm.DB {
 	return db
 }
-
-// "shola:shola@me/simplerest?"
